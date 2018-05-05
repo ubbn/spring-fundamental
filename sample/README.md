@@ -10,5 +10,9 @@ This project is structured into several logical layers:
 
 ## Design
 
-However, it doesn't use any dependency injection or design pattern
-to provide efficiency.
+However, it doesn't use any dependency injection, so it lacks:
+- Tightly coupled classes
+- Not testable
+- Not reusable as with hard configuration
+- Too much extra work, other than actual business logic
+
