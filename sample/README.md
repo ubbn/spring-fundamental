@@ -1,18 +1,10 @@
 # Sample Project
-It is sample java project with maven dependency injection
+It is simple java project with maven build manager
 
-## Archiecture
-This project is structured into several logical layers:
-- **Customer model** that describes data
-- **Customer repository** stores customers data and provides access to it
-- **Customer service** provide business logical service
-- **Application class** utilizes service
-
-## Design
-
-However, it doesn't use any dependency injection, so it lacks:
-- Tightly coupled classes
+## Description
+However, it doesn't use any dependency injector like Spring, therefore it is:
+- Tightly coupled 
 - Not testable
-- Not reusable as with hard configuration
-- Too much extra work, other than actual business logic
+- Not reusable as with hard configuration in the code
+- Has extra boilerplate codes, other than actual business logic
 
