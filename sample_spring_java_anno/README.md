@@ -20,7 +20,6 @@ public class AppConfig {
 ```java
 @Service("fooCustomerService")
 public class CustomerServiceImpl implements CustomerService {
-
     @Autowired
     CustomerRepository customerRepository = new CustomerRepositoryImpl();
     ...
