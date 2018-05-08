@@ -1,16 +1,16 @@
 # Spring via XML
-Here our java project uses Spring framework as dependency injector and its configuration is done through XML file
+Here our java project uses Spring framework as dependency injector and its configuration is done through pure XML file
 
 ## XML Configuration
 - Most common approach, yet simplest
-- Uses spring application context file
-- Services are injected inside xml file in 3 different ways (setter, constructor, autowire)
+- Uses spring application context file which is XML configuration file
+- Services are injected inside XML file in 3 different ways (through Setter, Constructor and Autowiring)
 - Services are resolved via ``AplicationContext``, central interface in Spring application for providing configuration information to application
 
 
 ## Application Context File
 - Spring context file which is sort of HashMap
-- Commonly named ``applicationContext.xml`` as convention, name or extension doesn't matter as long as XML file
+- Commonly named ``applicationContext.xml`` as convention. Name or extension doesn't matter as long as it is XML file
 - Has namespaces which aid validation of configuration
 
 ## Injection
@@ -30,17 +30,17 @@ Injection is done in three different ways in xml config file.
 </bean>
 ```
 
-or shorthand way
+or shorthand way, property tag can be child attribute to bean.
 
 ```xml
-    <bean name="fooCustomerService" class="com.home.service.CustomerServiceImpl"
-          p:customerRepository-ref="fooCustomerRepository"
-    />
+<bean name="fooCustomerService" class="com.home.service.CustomerServiceImpl"
+    p:customerRepository-ref="fooCustomerRepository"
+/>
 ```
 
 3. through **Autowiring**
 
-Spring does automating inferring to find & set required references in the below implementation class from other injected beans. It can autowire through by constructor, by type or by name.
+Spring does automatic inferring to find & set required references in the below implementation class from other injected beans. It can autowire through by constructor, by type or by name.
 
 ```xml
 <bean name="fooCustomerService"
