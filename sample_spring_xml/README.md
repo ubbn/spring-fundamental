@@ -10,7 +10,7 @@ Here our java project uses Spring framework as dependency injector and its confi
 
 ## Application Context File
 - Spring context file which is sort of HashMap
-- Commonly named ``applicationContext.xml`` as convention. Name or extension doesn't matter as long as it is XML file
+- Commonly named [``applicationContext.xml``](src/main/resources/applicationContext.xml) as convention. Name or extension doesn't matter as long as it is XML file
 - Has namespaces which aid validation of configuration
 
 ## Injection

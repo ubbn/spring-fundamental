@@ -1,9 +1,15 @@
 # Spring via Annotation
-Here our project uses Spring with annotaion configuration
+Here our project uses Spring with minimal XML config and java annotaion
+
+## Application Context File
+XML config file [``applicationContext.xml``](src/main/resources/applicationContext.xml) is still used, however no bean is defined in it. The given package is scanned and beans are injected automatically.
+```xml
+<context:annotation-config />
+<context:component-scan base-package="com.home" />
+```
 
 ## Annotation Configuration
-- Uses annotations (``Service``, ``Repository`` etc) from ``org.springframework.stereotype`` package
-- Every bean is configured by those those annotations
+Beans are annotated by ``Service``, ``Repository`` etc from ``org.springframework.stereotype`` package
 
 ```java
 @Service("fooCustomerService")
@@ -25,14 +31,6 @@ public class CustomerServiceImpl implements CustomerService {
 }
 ```
 
-
-## Application Context File
-XML config file ``applicationContext.xml`` is still used but not when defining beans.
-```xml
-<context:annotation-config />
-<context:component-scan base-package="com.home" />
-```
-
 ## Autowiring
 Injected beans are referenced through autowiring in 3 different ways.
 1. through **Constructor**
@@ -45,7 +43,7 @@ public CustomerServiceImpl(CustomerRepository customerRepository) {
 ```
 
 2. through **Setter**
-```xml
+```java
 @Autowired
 public void setCustomerRepository(CustomerRepository customerRepository) {
     this.customerRepository = customerRepository
@@ -54,7 +52,7 @@ public void setCustomerRepository(CustomerRepository customerRepository) {
 
 3. through **Property**
 
-```xml
+```java
 @Autowired
 private CustomerRepository customerRepository;
 ```
