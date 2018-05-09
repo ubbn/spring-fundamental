@@ -51,7 +51,7 @@ Spring does automatic inferring to find & set required references in the below i
 ## Resolve
 Each bean is resolved in [application](src/main/java/Application.java) by its name defined in ``bean`` tag.
 Below bean ```CustomerServiceImpl``` has reference to (uses it as property inside) another bean which has name ```fooCustomerRepository```.
-This bean is resolved in application with its name ```fooCustomerService``` as below: 
+So, it is resolved in application with its name ```fooCustomerService``` as below: 
 ```java
 ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 CustomerService customerService = context.getBean("fooCustomerService", CustomerService.class);

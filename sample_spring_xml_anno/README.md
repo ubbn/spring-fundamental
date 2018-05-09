@@ -9,7 +9,7 @@ XML config file [``applicationContext.xml``](src/main/resources/applicationConte
 ```
 
 ## Annotation Configuration
-Beans are annotated by ``Service``, ``Repository`` etc from ``org.springframework.stereotype`` package
+Beans are annotated by ``Service``, ``Repository`` etc from ``org.springframework.stereotype`` package. Below bean ```CustomerServiceImpl``` has reference to (as uses it as property inside) another bean ```CustomerRepositoryImpl```.
 
 ```java
 @Service("fooCustomerService")
@@ -57,9 +57,7 @@ private CustomerRepository customerRepository;
 ```
 
 ## Resolve
-Services are resolved via ``AplicationContext``, central interface in Spring application for providing configuration information to application. And they are resolved in the [application](src/main/java/Application.java) by value in their name attribute.
-Below bean ```CustomerServiceImpl``` has reference to (uses it as property inside) another bean which has name ```fooCustomerRepository```.
-This bean is resolved in application with its name ```fooCustomerService``` as below: 
+Each bean is resolved in the [application](src/main/java/Application.java) by value in their name attribute. This bean is resolved in application with its name ```fooCustomerService``` as below:
 ```java
 ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 CustomerService customerService = context.getBean("fooCustomerService", CustomerService.class);
