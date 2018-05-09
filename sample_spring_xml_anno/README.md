@@ -27,7 +27,6 @@ public class CustomerServiceImpl implements CustomerService {
             .stream().filter(x -> x.getFirstName() != null || x.getLastName() != null)
             .collect(Collectors.toList());
     }
-
 }
 ```
 
@@ -58,7 +57,7 @@ private CustomerRepository customerRepository;
 ```
 
 ## Resolve
-Services are resolved via ``AplicationContext``, central interface in Spring application for providing configuration information to application. And they are resolved by value in their name attribute.
+Services are resolved via ``AplicationContext``, central interface in Spring application for providing configuration information to application. And they are resolved in the [application](src/main/java/Application.java) by value in their name attribute.
 Below bean ```CustomerServiceImpl``` has reference to (uses it as property inside) another bean which has name ```fooCustomerRepository```.
 This bean is resolved in application with its name ```fooCustomerService``` as below: 
 ```java

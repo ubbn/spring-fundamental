@@ -1,8 +1,8 @@
 # Sample Project
-It is simple java project with maven build manager
+It is a simple java maven project
 
 ## Description
-However, it doesn't use any dependency injector like Spring, therefore it is:
+It doesn't use any dependency injector like Spring, therefore it is:
 - Tightly coupled 
 - Not testable
 - Not reusable as with hard configuration in the code

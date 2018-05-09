@@ -14,7 +14,7 @@ Here our java project uses Spring framework as dependency injector and its confi
 - Has namespaces which aid validation of configuration
 
 ## Injection
-Injection is done in three different ways in xml config file. 
+Bean injection is done in 3 different ways in xml config file. 
 1. through **Constructor**
 
 ```xml
@@ -49,7 +49,7 @@ Spring does automatic inferring to find & set required references in the below i
 ```
 
 ## Resolve
-When the service is needed, it is resolved by value in their name attribute.
+Each bean is resolved in [application](src/main/java/Application.java) by its name defined in ``bean`` tag.
 Below bean ```CustomerServiceImpl``` has reference to (uses it as property inside) another bean which has name ```fooCustomerRepository```.
 This bean is resolved in application with its name ```fooCustomerService``` as below: 
 ```java
