@@ -13,16 +13,17 @@ Spring uses beans which are POJO. POJO is plain old java object. Developers don'
 - **Removes configuration code**   
 Removes configuration codes from business logic codes. And configurations are separated in xml file or java classes. 
 - **Design patterns**
-Provides dependency injection out of box and supports interface driven development by using practical design patterns like singleton, factory etc. All object's instantiation and initialization handled by Spring
+Provides dependency injection out of box and supports interface driven development by using practical design patterns like singleton, factory etc. 
 
 ### Inner Working of Spring
-Any bean in Spring is Singleton scope by default. It can be configured differently using @Scope annotation
+In Spring, beans are java classes which are barebone of your application and they are assembled and managed by Spring IoC container. All beans' instantiation and initialization handled by Spring. Spring configuration metadata is totally decoupled from Spring IoC container itself and there are three different methods:
+- XML based configuration file
+- Annontation-based (with minimal XML or java config)
+- Java-based configuration class
 
-@Service
-@Scope("")
-public 
+By default any bean in Spring is in **Singleton** scope. It can be configured differently using ``@Scope`` annotation with other value such as **Prototype**, **Session**, **Request** etc.   
 
-Services are resolved via ``AplicationContext``, central interface in Spring application for providing configuration information to application. 
+Beans are resolved via ``AplicationContext``, central interface in Spring application for providing configuration information to application. 
 
 ## Sample Application
 The sample application is developed in 5 different ways to demonstrate how Spring can help and how it can be configured. 
@@ -35,16 +36,16 @@ The sample application is structured into several logical layers:
 - **Application class** utilizes service
 
 ### No Spring
-[Here](tree/master/sample/), it is a basic java maven project without Spring
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample), it is a basic java maven project without Spring
 
 ### Spring with pure XML
-[Here](tree/master/sample_spring_xml/), Spring is used and configured with pure XML file
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_xml/), Spring is used and configured with pure XML file
 
 ### Spring with XML & annotation
-[Here](tree/master/sample_spring_xml_anno/), Spring is used and configured with minimal XML file and java annotations in bean injection classes
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_xml_anno/), Spring is used and configured with minimal XML file and java annotations in bean injection classes
 
 ### Sample with java config
-[Here](tree/master/sample_spring_java/), Spring is used and configured with pure java class, no change in bean injection classes
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_java/), Spring is used and configured with pure java class, no change in bean injection classes
 
 ### Sample with java config & annotation
-[Here](tree/master/sample_spring_java_anno/), Spring is used and configured with java class and annotations in bean injection classes
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_java_anno/), Spring is used and configured with java class and annotations in bean injection classes
