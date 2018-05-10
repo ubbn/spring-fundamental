@@ -1,5 +1,3 @@
-package com.home;
-
 import com.home.service.CustomerService;
 import com.home.service.CustomerServiceImpl;
 
