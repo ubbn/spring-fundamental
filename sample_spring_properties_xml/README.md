@@ -17,10 +17,16 @@ dbUsername=bbn
 dbPassword=pwd
 ```
 
-
 ## Injection
 Property values are injected through autowiring in [beans implementation](src/main/java/com/home/repository/CustomerRepositoryImpl.java).
 ```java
 @Value("${dbUsername}")
 private String dbUsername;
+```
+
+## Resolve
+Bean is resolved in [application](src/main/java/Application.java)
+```java
+ApplicationContext context = new ClassPathXmlApplicationContext("appContext.xml");
+CustomerService service = context.getBean("customerService", CustomerService.class);
 ```
