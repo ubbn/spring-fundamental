@@ -1,5 +1,5 @@
 # Spring fundamental
-Project aims to demonstrate practical use of [Spring framework](https://spring.io/) in java application. 
+The project aims to demonstrate practical use of [Spring framework](https://spring.io/) in java application. 
 
 ## Spring
 
@@ -26,7 +26,7 @@ By default any bean in Spring is in **Singleton** scope. It can be configured di
 Beans are resolved via ``AplicationContext``, central interface in Spring application for providing configuration information to application. 
 
 ## Sample Application
-The sample application is developed in 5 different ways to demonstrate how Spring can help and how it can be configured. 
+The same application is developed in 5 different ways to demonstrate how Spring can help and how it can be configured. 
 
 ### Application architecture
 The sample application is structured into several logical layers:
@@ -39,13 +39,22 @@ The sample application is structured into several logical layers:
 [Here](https://github.com/ubbn/spring-fundamental/tree/master/sample), it is a basic java maven project without Spring
 
 ### Spring with pure XML
-[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_xml/), Spring is used and configured with pure XML file
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_xml/), Spring is used and configured with **pure XML** file
 
 ### Spring with XML & annotation
-[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_xml_anno/), Spring is used and configured with minimal XML file and java annotations in bean injection classes
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_xml_anno/), Spring is used and configured with **minimal XML** file and **java annotations** in bean injection classes
 
 ### Sample with java config
-[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_java/), Spring is used and configured with pure java class, no change in bean injection classes
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_java/), Spring is used and configured with **pure java** class, no change in bean injection classes
 
 ### Sample with java config & annotation
-[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_java_anno/), Spring is used and configured with java class and annotations in bean injection classes
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_java_anno/), Spring is used and configured with **java** class and **annotations** in bean injection classes
+
+## Sample Application with Properties
+The same application acccesses data in properties through java configuration and xml configuration
+
+### Sample and Properties with java config
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_properties_java/), Spring accesses application data in properties file through **java** configuration
+
+### Sample and Properties with xml config
+[Here](https://github.com/ubbn/spring-fundamental/tree/master/sample_spring_properties_xml/), Spring accesses application data in properties file through **xml** configuration
